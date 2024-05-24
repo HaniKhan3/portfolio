@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess the Number Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    p {
+      text-align: center;
+    }
+    
+    #guessField {
+      width: 100px;
+    }
+    
+    #message {
+      font-weight: bold;
+    }
+  </style>
+  <script>
+    // Generate a random number between 1 and 100
+    const randomNumber = Math.floor(Math.random() * 100) + 1;
+    console.log("The random number is:", randomNumber);
+
+    // Get references to HTML elements
+    const guessField = document.getElementById('guessField');
+    const submitButton = document.querySelector('button');
+    const message = document.getElementById('message');
+
+    // Set initial values
+    let guessCount = 0;
+    let userGuess = null;
+    let gameWon = false;
+
+    // Function to check the user's guess
+    function checkGuess() {
+      userGuess = parseInt(guessField.value);
+      guessCount++;
+      if (userGuess === randomNumber) {
+        gameWon = true;
+        displayMessage(Congratulations! You guessed the number (`4`) in (`guessCount`) guesses!);
+      } else if (guessCount === 10) {
+        displayMessage(Game Over! The number was (`randomNumber`).);
+      } else {
+        let messageText = `Wrong! `;
+        if (userGuess < randomNumber) {
+          messageText += The correct number is greater than (`userGuess`).;
+        } else {
+          messageText += The correct number is lesser than (`userGuess`).;
+        }
+        displayMessage( (`messageText`) (Guess (`guessCount`) of 10));
+        guessField.value = '';
+      }
+    }
+
+    // Function to display a message
+    function displayMessage(msg) {
+      message.textContent = msg;
+      if (gameWon) {
+        message.style.color = 'green';
+      } else if (guessCount === 10) {
+        message.style.color = 'red';
+      } else {
+        message.style.color = 'black';
+      }
+    }
+  </script>
+  <h1>Guess the Number Game</h1>
+  <p>Guess a number between 1 and 100:</p>
+  <input type="number" id="guessField">
+  <button onclick="checkGuess()">Submit Guess</button>
+  <p id="message"></p>
+  <script src="script.js"></script>
+</body>
+</html>

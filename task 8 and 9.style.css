@@ -1,0 +1,9 @@
+body {
+  font-size: 77pt;
+  color: rgb(226, 10, 46);
+  background-color: rgb(17, 81, 244);
+}
+
+#textToClick:hover {
+  color: rgb(192, 234, 23); /* Change color to red on hover */
+}

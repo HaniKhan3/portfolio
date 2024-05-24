@@ -1,0 +1,55 @@
+/* Top Navigation Bar (#top-nav) */
+#top-nav {
+    background-color: #333; /* Set background color */
+    color: white; /* Set text color */
+    padding: 10px; /* Add padding */
+    text-align: center; /* Center links horizontally */
+  }
+  
+  #top-nav a {
+    color: inherit; /* Inherit text color from #top-nav */
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px; /* Add padding between links */
+    display: inline-block; /* Display links inline */
+  }
+  
+  #top-nav a:hover {
+    background-color: #ddd; /* Change background color on hover */
+    color: black; /* Change text color on hover */
+  }
+  
+  /* Left Navigation Bar (#left-nav) */
+  #left-nav {
+    background-color: #ddb8d8; /* Set background color */
+    color: black; /* Set text color */
+    padding: 10px; /* Add padding */
+    height: 100vh; /* Set height to 100% viewport height */
+    position: fixed; /* Fix the sidebar to the left */
+    top: 0; /* Position it at the top */
+    left: 0; /* Position it at the left edge */
+    width: 200px; /* Set sidebar width */
+  }
+  
+  #left-nav a {
+    color: inherit; /* Inherit text color from #left-nav */
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px; /* Add padding between links */
+    display: block; /* Display links as block elements (full width) */
+  }
+  
+  #left-nav a:hover {
+    background-color: #a8d115; /* Change background color on hover */
+    color: black; /* Change text color on hover */
+  }
+  
+  /* Image (#myImage) */
+  #myImage {
+    width: 300px; /* Set image width */
+    height: 200px; /* Set image height */
+    margin: 0 auto; /* Center image horizontally */
+    display: block; /* Ensure image displays as a block element */
+  }
+  
+  /* Optional: Image hover effect using JavaScript (script.js) */
+  /* This section isn't included in the provided code but can be implemented using JavaScript to change the image position on hover. */
+  

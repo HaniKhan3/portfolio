@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Display Variables in HTML</title>
+</head>
+<body>
+<!-- HTML tag to display all variable values -->
+<p id="allVariables"></p>
+
+<script>
+// Bollywood hero names as variables
+var friend1 = "Sabahat";
+var friend2 ="Maryam";
+var friend3 = "sozian";
+var friend4 = "Ayesh";
+var friend5 = "Samia";
+var friend6 = "Fatima";
+var friend7 = "Aiman";
+var friend8 = "Dua";
+var friend9 = "Maryam Asif";
+var friend10 = "Irqa";
+
+// Concatenate all hero names and values
+var allValues = "friend1 = " + friend1 + "<br>" +
+                "friend2 = " + friend2 + "<br>" +
+                "friend3 = " + friend3 + "<br>" +
+                "friend4 = " + friend4 + "<br>" +
+                "friend5 = " + friend5 + "<br>" +
+                "friend6 = " + friend6 + "<br>" +
+                "friend7 = " + friend7 + "<br>" +
+                "friend8 = " + friend8 + "<br>" +
+                "friend9 = " + friend9 + "<br>" +
+                "friend10 = " + friend10;
+
+// Display all hero names and values in a single HTML tag
+document.getElementById("allVariables").innerHTML = allValues;
+</script>
+</body>
+</html>
+

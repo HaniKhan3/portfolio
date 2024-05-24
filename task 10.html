@@ -1,0 +1,24 @@
+<title>Move on Hover</title>
+<style>
+  img {
+    width: 200px;
+    height: 200px;
+    position: relative;  /* Needed for relative positioning */
+  }
+</style>
+</head>
+<body>
+<img id="myImage" src=""C:\Users\Sozina Sehr\Downloads\image 2.jpeg" alt="Image" 
+     onmouseover="moveImage(this)" onmouseout="moveImageBack(this)">
+
+<script>
+  function moveImage(image) {
+    image.style.top = "10px";  /* Move image down 10 pixels */
+    image.style.left = "20px";  /* Move image right 20 pixels */
+  }
+
+  function moveImageBack(image) {
+    image.style.top = "0px";  /* Reset image position */
+    image.style.left = "0px";  /* Reset image position */
+  }
+</script>
